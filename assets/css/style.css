@@ -58,17 +58,16 @@ body {
   font-size: 50px;
   font-weight: 500;
   line-height: 55px;
-  text-align: center;
   margin-bottom: 20px;
 }
 .title {
   font-size: 16px;
   font-weight: 400;
-  text-align: center;
 }
 
 .content-container {
   margin-bottom: 50px;
+  text-align: center;
 }
 /*======Header-Start======*/
 header {
@@ -333,7 +332,7 @@ header li a.active {
 
 /*======Why-Choose-Us-Start======*/
 .why-choose-us {
-  background-color: #0d0d0fe0;
+  background-color: #101012;
   position: relative;
   z-index: 2;
   overflow: hidden;
@@ -493,11 +492,11 @@ header li a.active {
 /*======Why-Choose-Us-End======*/
 /*======We-Serve-Start======*/
 .We-Serve {
-  background-color: #0d0d0fe0;
+  background-color: #101012;
   position: relative;
   z-index: 2;
   overflow: hidden;
-  cursor: url('../images/Ellipse-cursor.svg'), auto;
+  cursor: url("../images/Ellipse-cursor.svg"), auto;
 }
 
 .We-Serve::before {
@@ -516,7 +515,7 @@ header li a.active {
 .md-globe {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 40px;
 }
 .We-Serve .arrow-icon {
   display: block;
@@ -541,21 +540,23 @@ header li a.active {
   max-width: 324px;
   width: 100%;
 }
-.We-Serve .serve-bx h4{
+.We-Serve .serve-bx h4 {
   font-size: 40px;
   font-weight: 400;
 
   transition: all 0.5s linear;
 }
-.We-Serve .serve-bx:hover h4{
-  background: linear-gradient(274.23deg, #8161FF 17.37%, #C366FF 40.24%, #FFF759 111.95%);
+.We-Serve .serve-bx:hover h4 {
+  background: linear-gradient(
+    274.23deg,
+    #8161ff 17.37%,
+    #c366ff 40.24%,
+    #fff759 111.95%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transform: scale(1.02); 
+  transform: scale(1.02);
 }
-
-
-
 
 .We-Serve .appear-img {
   position: absolute;
@@ -563,7 +564,12 @@ header li a.active {
   top: 50%;
   max-width: 181px;
   transform: translateY(-50%) rotate(-17deg) scale(0);
-  background: linear-gradient(148.93deg, #8262FF 1.71%, #B866FF 40.39%, #FFF85A 99.59%);
+  background: linear-gradient(
+    148.93deg,
+    #8262ff 1.71%,
+    #b866ff 40.39%,
+    #fff85a 99.59%
+  );
   padding: 1px 1px 1px 2px;
   border-radius: 11px;
   overflow: hidden;
@@ -571,12 +577,52 @@ header li a.active {
   z-index: 2;
 }
 
-.We-Serve .serve-bx:hover .appear-img{
+.We-Serve .serve-bx:hover .appear-img {
   transform: translateY(-50%) rotate(-17deg) scale(1);
 }
 
-.We-Serve .appear-img img{
+.We-Serve .appear-img img {
   width: 100%;
 }
 
+.We-Serve .we-serve-move {
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: -1;
+  opacity: 1;
+  object-fit: contain;
+  transition: transform 0.1s ease-out;
+  width: 70vw;
+  height: 70vw;
+}
+
 /*======We-Serve-End======*/
+
+/*======Meet-Our-Team======*/
+.meet-our-team .sub-heading {
+  color: var(--black);
+  margin: 0;
+}
+
+.meet-our-team .title {
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0 0 0 auto;
+  max-width: 587px;
+  width: 100%;
+}
+
+.meet-our-team .sub-heading:after {
+  content: "";
+  background-color: rgba(53, 105, 207, 1);
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+  border-radius: 100%;
+  margin-left: 5px;
+}
+
+/*======Meet-Our-Team======*/
