@@ -109,6 +109,7 @@ header li a.active {
   margin-top: -127px;
   position: relative;
   padding: 150px 0 80px;
+  min-height: 100vh;
 }
 .banner .banner-bg {
   width: 100%;
@@ -625,4 +626,78 @@ header li a.active {
   margin-left: 5px;
 }
 
+.meet-our-team .team-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 50px;
+}
+
+.meet-our-team .team-card {
+  box-shadow: -3.82px 3.82px 30.58px 0px rgba(0, 0, 0, 0.08);
+  height: 410px;
+  background-color: rgba(6, 6, 6, 1);
+  flex: 1;
+  border-radius: 15px;
+  transition: all 0.5s ease-in;
+  position: relative;
+  overflow: hidden;
+}
+.meet-our-team h3 {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 38px;
+}
+.meet-our-team h3:after {
+  content: "";
+  background-color: rgba(53, 105, 207, 1);
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  border-radius: 100%;
+  margin-left: 5px;
+}
+.meet-our-team h3 span {
+  display: block;
+  color: rgba(53, 105, 207, 1);
+}
+.meet-our-team strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+.meet-our-team .team img {
+  width: 100%;
+  aspect-ratio: 16 / 17;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all 0.5s ease-in;
+}
+.meet-our-team .team {
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s ease-in;
+  margin-left: auto;
+  position: relative;
+}
+
+.meet-our-team .card-details {
+  position: absolute;
+  padding: 40px;
+  top: 0;
+  left: -100%;
+  transition: all 0.5s ease-in;
+}
+.meet-our-team .team-card:hover {
+  flex-grow: 2;
+}
+.meet-our-team .team-card:hover .card-details {
+  left: 0;
+}
+.meet-our-team .team-card:hover .team {
+  width: 65%;
+}
 /*======Meet-Our-Team======*/
