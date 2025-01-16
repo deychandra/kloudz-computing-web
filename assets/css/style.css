@@ -576,6 +576,7 @@ header li a.active {
   overflow: hidden;
   transition: all 0.5s linear;
   z-index: 2;
+  box-shadow: #eac591a6 1px 1px 20px 0px;
 }
 
 .We-Serve .serve-bx:hover .appear-img {
@@ -637,12 +638,21 @@ header li a.active {
 .meet-our-team .team-card {
   box-shadow: -3.82px 3.82px 30.58px 0px rgba(0, 0, 0, 0.08);
   height: 410px;
-  background-color: rgba(6, 6, 6, 1);
+  background-color: rgba(53, 105, 207, 1);
   flex: 1;
   border-radius: 15px;
   transition: all 0.5s ease-in;
   position: relative;
   overflow: hidden;
+}
+.meet-our-team .team-card::before {
+  content: "";
+  background-color: rgba(10, 8, 9, 1);
+  width: 100%;
+  left: 0;
+  height: 373px;
+  position: absolute;
+  border-radius: 0 0 0 26px;
 }
 .meet-our-team h3 {
   font-size: 30px;
@@ -671,10 +681,10 @@ header li a.active {
 .meet-our-team .team img {
   width: 100%;
   aspect-ratio: 16 / 17;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transition: all 0.5s ease-in;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: all 0.5s ease-in;
 }
 .meet-our-team .team {
   height: 100%;
@@ -682,6 +692,7 @@ header li a.active {
   transition: all 0.5s ease-in;
   margin-left: auto;
   position: relative;
+  z-index: 1;
 }
 
 .meet-our-team .card-details {
@@ -699,5 +710,43 @@ header li a.active {
 }
 .meet-our-team .team-card:hover .team {
   width: 65%;
+}
+.meet-our-team h6 {
+  font-size: 121px;
+  font-weight: 700;
+  color: #161415;
+  position: absolute;
+  top: 0;
+  right: 0;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  text-transform: uppercase;
+  transform: scaleX(-1) scaleY(-1);
+  line-height: 96px;
+  z-index: 0;
+}
+.meet-our-team .team-card a {
+  background-color: rgba(33, 33, 33, 1);
+  border: 4px solid rgba(53, 105, 207, 1);
+  position: absolute;
+  bottom: 6px;
+  /* left: 30px; */
+  left: -50%;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in;
+}
+.meet-our-team .team-card:hover a {
+  left: 30px;
+}
+.meet-our-team a img {
+  transition: all 0.5s ease-in;
+}
+.meet-our-team a:hover img {
+  transform: rotate(45deg);
 }
 /*======Meet-Our-Team======*/

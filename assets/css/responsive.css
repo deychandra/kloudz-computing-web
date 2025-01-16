@@ -1,0 +1,5 @@
+@media only screen and (min-width: 1400px) {
+  .meet-our-team .team img {
+    aspect-ratio: 17 / 16;
+  }
+}
