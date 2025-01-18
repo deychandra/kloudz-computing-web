@@ -1180,13 +1180,44 @@ footer .logo-column {
   gap: 30px;
 }
 footer .logo-column p{
-
+font-size: 16px;
+font-weight: 400;
 }
 footer .logo-column strong{
 font-size: 16px;
 font-weight: 600;
 display: block;
+margin-bottom: 5px;
 }
+footer .contact{
+  display: flex;
+  flex-direction: column;
+}
+footer .contact a{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 31px;
+  color: var(--white);
+  width: fit-content;
+}
+footer  .social{
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+footer  ul li{
+  display: block;
+  padding-bottom: 15px;
+}
+footer  ul li:last-child{
+  padding-bottom: 0;
+}
+footer  ul li a{
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--white);
+ }
 /*======Footer======*/
 .animated-btn-sm {
   font-family: var(--poppins);
