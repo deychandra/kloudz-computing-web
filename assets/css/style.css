@@ -1217,6 +1217,13 @@ footer  ul li a{
   font-size: 16px;
   font-weight: 400;
   color: var(--white);
+  transition: all 0.5s linear;
+ }
+ footer  ul li a:hover{
+  -webkit-text-fill-color: transparent;
+  /* font-weight: 600; */
+  background: linear-gradient(93.25deg, rgb(233, 34, 249) -20.27%, rgb(175, 100, 254) 26.55%, rgb(239, 210, 130) 100%) text;
+
  }
 /*======Footer======*/
 .animated-btn-sm {
