@@ -1179,52 +1179,81 @@ footer .logo-column {
   flex-direction: column;
   gap: 30px;
 }
-footer .logo-column p{
-font-size: 16px;
-font-weight: 400;
+footer .logo-column p {
+  font-size: 16px;
+  font-weight: 400;
 }
-footer .logo-column strong{
-font-size: 16px;
-font-weight: 600;
-display: block;
-margin-bottom: 5px;
+footer .logo-column strong {
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
 }
-footer .contact{
+footer .contact {
   display: flex;
   flex-direction: column;
 }
-footer .contact a{
+footer .contact a {
   font-size: 14px;
   font-weight: 400;
   line-height: 31px;
   color: var(--white);
   width: fit-content;
 }
-footer  .social{
+footer .social {
   margin-top: 60px;
   display: flex;
   align-items: center;
   gap: 20px;
 }
-footer  ul li{
+footer ul li {
   display: block;
   padding-bottom: 15px;
 }
-footer  ul li:last-child{
+footer ul li:last-child {
   padding-bottom: 0;
 }
-footer  ul li a{
+footer ul li a {
   font-size: 16px;
   font-weight: 400;
   color: var(--white);
   transition: all 0.5s linear;
- }
- footer  ul li a:hover{
+}
+footer ul li a:hover {
   -webkit-text-fill-color: transparent;
   /* font-weight: 600; */
-  background: linear-gradient(93.25deg, rgb(233, 34, 249) -20.27%, rgb(175, 100, 254) 26.55%, rgb(239, 210, 130) 100%) text;
-
- }
+  background: linear-gradient(
+      93.25deg,
+      rgb(233, 34, 249) -20.27%,
+      rgb(175, 100, 254) 26.55%,
+      rgb(239, 210, 130) 100%
+    )
+    text;
+}
+footer .copy-right {
+  margin: 50px 0 50px;
+  padding-top: 30px;
+  border-top: 1px solid #ffffff17;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+footer .copy-right small {
+  color: var(--white);
+  font-weight: 400;
+  font-size: 16px;
+}
+footer .gp a {
+  color: var(--white);
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: underline;
+}
+footer .gp {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 /*======Footer======*/
 .animated-btn-sm {
   font-family: var(--poppins);
