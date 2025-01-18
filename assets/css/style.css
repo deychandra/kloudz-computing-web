@@ -1174,6 +1174,19 @@ footer .slider-container:hover .slider-track {
   animation-play-state: paused;
 }
 
+footer .logo-column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+footer .logo-column p{
+
+}
+footer .logo-column strong{
+font-size: 16px;
+font-weight: 600;
+display: block;
+}
 /*======Footer======*/
 .animated-btn-sm {
   font-family: var(--poppins);
