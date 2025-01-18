@@ -193,6 +193,39 @@ tabScroll.addEventListener('mousemove', (e) => {
 // Scroll
 
 
+const footerGlow = document.querySelector('.footer-glow');
+const footerSection = document.querySelector('footer');
+
+let footerOffsetX = 0;
+let footerOffsetY = 0;
+
+footerSection.addEventListener('mousemove', (event) => {
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+    // Calculate the offset for the glow effect
+    footerOffsetX = (mouseX / windowWidth - 0.5) * 30;
+    footerOffsetY = (mouseY / windowHeight - 0.5) * 30;
+
+    // Apply the transform to the footer glow
+    footerGlow.style.transform = `translate(-50%, -50%) translate(${footerOffsetX}%, ${footerOffsetY}%)`;
+});
+
+footerSection.addEventListener('mouseenter', () => {
+    footerGlow.style.transform = `translate(-50%, -50%) translate(${footerOffsetX}%, ${footerOffsetY}%)`;
+});
+
+footerSection.addEventListener('mouseleave', () => {
+    // Reset the glow to its original position on mouse leave
+    footerGlow.style.transform = `translate(-50%, -50%) translate(0%, 0%)`;
+});
+
+
+
+// Scroll
 var swiper = new Swiper(".mySwiper", {
     cssMode: true,
     navigation: {
@@ -205,36 +238,3 @@ var swiper = new Swiper(".mySwiper", {
     mousewheel: true,
     keyboard: true,
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Get all slider tracks
-const track = document.querySelector('.slider-track');
-
-// Function to clone items and ensure seamless loop
-function setupInfiniteSlider() {
-  // Clone the track content
-  const items = Array.from(track.children);
-  const itemWidth = items.reduce((acc, item) => acc + item.offsetWidth, 0);
-  
-  // Set the track width
-  track.style.width = `${itemWidth}px`;
-}
-
-// Initialize the slider
-window.addEventListener('load', setupInfiniteSlider);

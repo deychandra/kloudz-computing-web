@@ -1254,6 +1254,37 @@ footer .gp {
   align-items: center;
   gap: 20px;
 }
+footer .glow-right{
+  max-width: 100%;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
+footer .glow-right{
+  max-width: 100%;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
+footer .glow-left{
+  max-width: 100%;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+footer  .footer-glow{
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: -3;
+  opacity: 0.4;
+  object-fit: contain;
+  transition: transform 0.1s ease-out;
+  height: auto;
+}
 /*======Footer======*/
 .animated-btn-sm {
   font-family: var(--poppins);
