@@ -1058,7 +1058,7 @@ header li a.active {
   position: relative;
   overflow: hidden;
 }
-.get-in-touch .get-in-touch-glow{
+.get-in-touch .get-in-touch-glow {
   max-width: 100%;
   position: absolute;
   top: 50%;
@@ -1111,7 +1111,71 @@ header li a.active {
   margin: 0 auto 30px;
 }
 /*======Get-In-Touch======*/
-.animated-btn-sm{
+
+/*======Footer======*/
+footer {
+  background-color: #101012;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  padding: 10px 0;
+}
+footer::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(../images/why-choose-us-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  z-index: -2;
+}
+
+footer .slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 70px;
+}
+
+footer .slider-track {
+  display: flex;
+  animation: slide 50s linear infinite;
+}
+
+footer .slider-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  white-space: nowrap;
+  font-family: var(--montserrat);
+  font-size: 90px;
+  font-weight: 500;
+}
+
+footer .slider-track {
+  display: flex;
+  gap: 50px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+footer .slider-container:hover .slider-track {
+  animation-play-state: paused;
+}
+
+/*======Footer======*/
+.animated-btn-sm {
   font-family: var(--poppins);
   font-size: 20px;
   font-weight: 500;
@@ -1119,7 +1183,12 @@ header li a.active {
   transition: all 0.5s linear;
   padding: 21px 2px;
   border: 1px solid;
-  background: linear-gradient(91.87deg, #E925FB 0%, #023BA6 49.64%, #FDF068 99.79%); 
+  background: linear-gradient(
+    91.87deg,
+    #e925fb 0%,
+    #023ba6 49.64%,
+    #fdf068 99.79%
+  );
   background-size: 200% 200%;
 }
 .animated-btn-sm a {
@@ -1128,12 +1197,10 @@ header li a.active {
   background-color: #000;
   border-radius: 70px;
 }
-.animated-btn-sm:hover{
+.animated-btn-sm:hover {
   animation: btnanimate 5s ease-in-out infinite;
   box-shadow: #eabb918a 1px 0px 45px;
 }
-
-
 
 body::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
@@ -1149,9 +1216,5 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   border-radius: 0;
   background-color: #fff;
-  background-image: linear-gradient(
-    0deg,
-    #6236ff 14.56%,
-    #f1af36 85.39%
-  );
+  background-image: linear-gradient(0deg, #6236ff 14.56%, #f1af36 85.39%);
 }

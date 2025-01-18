@@ -205,3 +205,36 @@ var swiper = new Swiper(".mySwiper", {
     mousewheel: true,
     keyboard: true,
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Get all slider tracks
+const track = document.querySelector('.slider-track');
+
+// Function to clone items and ensure seamless loop
+function setupInfiniteSlider() {
+  // Clone the track content
+  const items = Array.from(track.children);
+  const itemWidth = items.reduce((acc, item) => acc + item.offsetWidth, 0);
+  
+  // Set the track width
+  track.style.width = `${itemWidth}px`;
+}
+
+// Initialize the slider
+window.addEventListener('load', setupInfiniteSlider);
