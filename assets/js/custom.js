@@ -161,34 +161,34 @@ getInTouchSection.addEventListener('mouseleave', () => {
 
 
 // Scroll
-const tabScroll = document.querySelector('.tab-scroll');
-let isDown = false;
-let startX;
-let scrollLeft;
-tabScroll.addEventListener('mousedown', (e) => {
-    isDown = true;
-    tabScroll.classList.add('active');
-    startX = e.pageX - tabScroll.offsetLeft;
-    scrollLeft = tabScroll.scrollLeft;
-});
+// const tabScroll = document.querySelector('.tab-scroll');
+// let isDown = false;
+// let startX;
+// let scrollLeft;
+// tabScroll.addEventListener('mousedown', (e) => {
+//     isDown = true;
+//     tabScroll.classList.add('active');
+//     startX = e.pageX - tabScroll.offsetLeft;
+//     scrollLeft = tabScroll.scrollLeft;
+// });
 
-tabScroll.addEventListener('mouseleave', () => {
-    isDown = false;
-    tabScroll.classList.remove('active');
-});
+// tabScroll.addEventListener('mouseleave', () => {
+//     isDown = false;
+//     tabScroll.classList.remove('active');
+// });
 
-tabScroll.addEventListener('mouseup', () => {
-    isDown = false;
-    tabScroll.classList.remove('active');
-});
+// tabScroll.addEventListener('mouseup', () => {
+//     isDown = false;
+//     tabScroll.classList.remove('active');
+// });
 
-tabScroll.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - tabScroll.offsetLeft;
-    const walk = (x - startX) * 2;
-    tabScroll.scrollLeft = scrollLeft - walk;
-});
+// tabScroll.addEventListener('mousemove', (e) => {
+//     if (!isDown) return;
+//     e.preventDefault();
+//     const x = e.pageX - tabScroll.offsetLeft;
+//     const walk = (x - startX) * 2;
+//     tabScroll.scrollLeft = scrollLeft - walk;
+// });
 
 // Scroll
 

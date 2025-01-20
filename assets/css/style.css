@@ -794,31 +794,13 @@ header li a.active {
   box-shadow: #eac591a6 1px 2px 13px 1px;
 }
 .case-studies .tab-scroll ul {
-  flex-wrap: nowrap;
-  gap: 0 17px;
-}
-.case-studies .tab-scroll ul li:last-child {
-  padding-right: 30px;
-}
-.case-studies .tab-scroll ul li:first-child {
-  padding-left: 30px;
-}
-.case-studies .tab-scroll {
-  overflow: scroll hidden;
-  white-space: nowrap;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  scroll-behavior: smooth;
-  touch-action: pan-x;
-  padding: 20px 0px;
+  flex-wrap: wrap;
+  gap: 17px;
 }
 
-.case-studies .tab-scroll::-webkit-scrollbar {
-  display: none;
-}
-.case-studies .tab-content {
-  margin-top: 50px;
-}
+
+
+
 
 .case-studies .masonry-grid {
   display: grid;
@@ -826,8 +808,7 @@ header li a.active {
   grid-auto-rows: 1px;
   gap: 40px;
   max-width: 1400px;
-  margin: 0 auto;
-  padding: 20px;
+  margin-top: 50px;
 }
 
 .case-studies .grid-item {
@@ -1265,12 +1246,14 @@ footer .glow-right{
   position: absolute;
   right: 0;
   z-index: -1;
+  top: 0;
 }
 footer .glow-left{
   max-width: 100%;
   position: absolute;
   left: 0;
   z-index: -1;
+  top: 0;
 }
 footer  .footer-glow{
   max-width: 100%;
