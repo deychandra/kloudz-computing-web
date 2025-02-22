@@ -1,3 +1,17 @@
+// Menu-open
+const toggleHamburger = document.querySelector('.toggle-hamburger');
+const mbContainer = document.querySelector('.mb-container');
+const tgl = document.querySelector('.tgl');
+
+toggleHamburger.addEventListener('click', function() {
+    mbContainer.classList.add('open-menu');
+});
+
+tgl.addEventListener('click', function() {
+    mbContainer.classList.remove('open-menu');
+});
+// Menu-open
+
 const glowImage = document.querySelector('.glow-move');
 const whyChooseUsSection = document.querySelector('.why-choose-us');
 
