@@ -1,254 +1,105 @@
-// Menu-open
-const toggleHamburger = document.querySelector('.toggle-hamburger');
-const mbContainer = document.querySelector('.mb-container');
-const tgl = document.querySelector('.tgl');
+document.addEventListener("DOMContentLoaded", function () {
+    // ✅ Menu Open/Close
+    const toggleHamburger = document.querySelector('.toggle-hamburger');
+    const mbContainer = document.querySelector('.mb-container');
+    const tgl = document.querySelector('.tgl');
 
-toggleHamburger.addEventListener('click', function() {
-    mbContainer.classList.add('open-menu');
-});
+    if (toggleHamburger && mbContainer && tgl) {
+        toggleHamburger.addEventListener('click', function () {
+            mbContainer.classList.add('open-menu');
+        });
 
-tgl.addEventListener('click', function() {
-    mbContainer.classList.remove('open-menu');
-});
-// Menu-open
+        tgl.addEventListener('click', function () {
+            mbContainer.classList.remove('open-menu');
+        });
+    }
 
-const glowImage = document.querySelector('.glow-move');
-const whyChooseUsSection = document.querySelector('.why-choose-us');
+    // ✅ Animation Function
+    function addMouseMoveAnimation(imageClass, sectionClass, intensity) {
+        const image = document.querySelector(imageClass);
+        const section = document.querySelector(sectionClass);
 
-let offsetD = 0;
-let offsetC = 0;
+        if (!image || !section) {
+            console.warn(`Warning: Element ${imageClass} or ${sectionClass} not found.`);
+            return;
+        }
 
-whyChooseUsSection.addEventListener('mousemove', (event) => {
-    const mouseX = event.clientX;
-    const mouseY = event.clientY;
+        let offsetX = 0;
+        let offsetY = 0;
 
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
+        section.addEventListener('mousemove', (event) => {
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
 
+            offsetX = (mouseX / windowWidth - 0.5) * intensity;
+            offsetY = (mouseY / windowHeight - 0.5) * intensity;
 
-    offsetX = (mouseX / windowWidth - 0.5) * 50;
-    offsetY = (mouseY / windowHeight - 0.5) * 50;
+            image.style.transform = `translate(-50%, -50%) translate(${offsetX}%, ${offsetY}%)`;
+        });
 
+        // ✅ Removed mouseleave event to prevent resetting the position
+    }
 
-    glowImage.style.transform = `translate(-50%, -50%) translate(${offsetX}%, ${offsetY}%)`;
-});
+    // ✅ Add animations to sections
+    addMouseMoveAnimation('.glow-move', '.why-choose-us', 50);
+    addMouseMoveAnimation('.we-serve-move', '.We-Serve', 40);
+    addMouseMoveAnimation('.case-studies-glow', '.case-studies', 50);
+    addMouseMoveAnimation('.get-in-touch-glow', '.get-in-touch', 30);
+    addMouseMoveAnimation('.get-in-touch-glow-new', '.get-in-touch', 30);
+    addMouseMoveAnimation('.get-in-touch-glow', '.contact-get-touch', 30);
+    addMouseMoveAnimation('.smart-solutions-glow', '.smart-solutions', 30);
+    addMouseMoveAnimation('.get-in-touch-glow', '.what-we-do', 30);
+    addMouseMoveAnimation('.footer-glow', 'footer', 30);
+    addMouseMoveAnimation('.footer-glow', '.ask-away', 30);
+    addMouseMoveAnimation('.inner-glow', '.inner-banner', 40);
 
-
-whyChooseUsSection.addEventListener('mouseenter', () => {
-
-    glowImage.style.transform = `translate(-50%, -50%) translate(${offsetX}%, ${offsetY}%)`;
-});
-
-
-whyChooseUsSection.addEventListener('mouseleave', () => {
-
-    glowImage.style.transform = `translate(-50%, -50%) translate(${offsetX}%, ${offsetY}%)`;
-});
-
-
-
-
-
-
-// animation
-const weServeImageGlobe = document.querySelector('.we-serve-move');
-const weServeSection = document.querySelector('.We-Serve');
-
-let offsetXh = 0;
-let offsetYw = 0;
-
-
-weServeSection.addEventListener('mousemove', (event) => {
-    const mouseX = event.clientX;
-    const mouseY = event.clientY;
-
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
-
-
-    offsetX = (mouseX / windowWidth - 0.5) * 40;
-    offsetY = (mouseY / windowHeight - 0.5) * 40;
-
-
-    weServeImageGlobe.style.transform = `translate(-50%, -50%) translate(${offsetX}%, ${offsetY}%)`;
+    // ✅ Swiper Scroll
+    var swiper = new Swiper(".mySwiper", {
+        cssMode: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        mousewheel: true,
+        keyboard: true,
+    });
 });
 
 
-weServeSection.addEventListener('mouseenter', () => {
-
-    weServeImageGlobe.style.transform = `translate(-50%, -50%) translate(${offsetX}%, ${offsetY}%)`;
-});
-
-
-weServeSection.addEventListener('mouseleave', () => {
-
-    weServeImageGlobe.style.transform = `translate(-50%, -50%) translate(${offsetX}%, ${offsetY}%)`;
-});
-
-
-
-
-
-
-
-
-
-// animation
-const caseStudiesGlobe = document.querySelector('.case-studies-glow');
-const caseStudiesSection = document.querySelector('.case-studies');
-
-let isMouseInsidee = false;
-let offsetXx = 0;
-let offsetYy = 0;
-
-
-caseStudiesSection.addEventListener('mousemove', (event) => {
-    const mouseX = event.clientX;
-    const mouseY = event.clientY;
-
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
-
-
-    offsetX = (mouseX / windowWidth - 0.5) * 50;
-    offsetY = (mouseY / windowHeight - 0.5) * 50;
-
-
-    caseStudiesGlobe.style.transform = `translate(-50%, -50%) translate(${offsetX}%, ${offsetY}%)`;
-});
-
-
-caseStudiesSection.addEventListener('mouseenter', () => {
-    isMouseInside = true;
-
-    caseStudiesGlobe.style.transform = `translate(-50%, -50%) translate(${offsetX}%, ${offsetY}%)`;
-});
-
-
-caseStudiesSection.addEventListener('mouseleave', () => {
-    isMouseInside = false;
-
-    caseStudiesGlobe.style.transform = `translate(-50%, -50%) translate(${offsetX}%, ${offsetY}%)`;
-});
-
-
-
-// animation
-const getInTouch = document.querySelector('.get-in-touch-glow');
-const getInTouchSection = document.querySelector('.get-in-touch');
-
-let isMouseInside = false;
-let offsetX = 0;
-let offsetY = 0;
-
-
-getInTouchSection.addEventListener('mousemove', (event) => {
-    const mouseX = event.clientX;
-    const mouseY = event.clientY;
-
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
-
-
-    offsetX = (mouseX / windowWidth - 0.5) * 30;
-    offsetY = (mouseY / windowHeight - 0.5) * 30;
-
-
-    getInTouch.style.transform = `translate(-50%, -50%) translate(${offsetX}%, ${offsetY}%)`;
-});
-
-
-getInTouchSection.addEventListener('mouseenter', () => {
-    isMouseInside = true;
-
-    getInTouch.style.transform = `translate(-50%, -50%) translate(${offsetX}%, ${offsetY}%)`;
-});
-
-
-getInTouchSection.addEventListener('mouseleave', () => {
-    isMouseInside = false;
-
-    getInTouch.style.transform = `translate(-50%, -50%) translate(${offsetX}%, ${offsetY}%)`;
-});
-
-
-
-
-// Scroll
-// const tabScroll = document.querySelector('.tab-scroll');
-// let isDown = false;
-// let startX;
-// let scrollLeft;
-// tabScroll.addEventListener('mousedown', (e) => {
-//     isDown = true;
-//     tabScroll.classList.add('active');
-//     startX = e.pageX - tabScroll.offsetLeft;
-//     scrollLeft = tabScroll.scrollLeft;
-// });
-
-// tabScroll.addEventListener('mouseleave', () => {
-//     isDown = false;
-//     tabScroll.classList.remove('active');
-// });
-
-// tabScroll.addEventListener('mouseup', () => {
-//     isDown = false;
-//     tabScroll.classList.remove('active');
-// });
-
-// tabScroll.addEventListener('mousemove', (e) => {
-//     if (!isDown) return;
-//     e.preventDefault();
-//     const x = e.pageX - tabScroll.offsetLeft;
-//     const walk = (x - startX) * 2;
-//     tabScroll.scrollLeft = scrollLeft - walk;
-// });
-
-// Scroll
-
-
-const footerGlow = document.querySelector('.footer-glow');
-const footerSection = document.querySelector('footer');
-
-let footerOffsetX = 0;
-let footerOffsetY = 0;
-
-footerSection.addEventListener('mousemove', (event) => {
-    const mouseX = event.clientX;
-    const mouseY = event.clientY;
-
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
-
-    // Calculate the offset for the glow effect
-    footerOffsetX = (mouseX / windowWidth - 0.5) * 30;
-    footerOffsetY = (mouseY / windowHeight - 0.5) * 30;
-
-    // Apply the transform to the footer glow
-    footerGlow.style.transform = `translate(-50%, -50%) translate(${footerOffsetX}%, ${footerOffsetY}%)`;
-});
-
-footerSection.addEventListener('mouseenter', () => {
-    footerGlow.style.transform = `translate(-50%, -50%) translate(${footerOffsetX}%, ${footerOffsetY}%)`;
-});
-
-footerSection.addEventListener('mouseleave', () => {
-    // Reset the glow to its original position on mouse leave
-    footerGlow.style.transform = `translate(-50%, -50%) translate(0%, 0%)`;
-});
-
-
-
-// Scroll
-var swiper = new Swiper(".mySwiper", {
-    cssMode: true,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-    },
-    mousewheel: true,
-    keyboard: true,
+document.addEventListener('DOMContentLoaded', function () {
+    const boxWrap = document.querySelector('.box-wrap');
+
+    if (boxWrap) {
+        // Get the dimensions and position of the box-wrap element
+        const rect = boxWrap.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+
+        // Add mousemove event listener to the document
+        document.addEventListener('mousemove', (e) => {
+            // Calculate the mouse position relative to the center of the box-wrap
+            const mouseX = e.clientX - centerX;
+            const mouseY = e.clientY - centerY;
+
+            // Define the maximum transform distance (adjust as needed)
+            const maxDistance = 20;
+
+            // Calculate the transform values based on mouse position
+            const translateX = (mouseX / rect.width) * maxDistance;
+            const translateY = (mouseY / rect.height) * maxDistance;
+
+            // Apply the transform to the box-wrap
+            boxWrap.style.transform = `translate(${translateX}px, ${translateY}px)`;
+        });
+
+        // Reset the transform when the mouse leaves the box-wrap area
+        boxWrap.addEventListener('mouseleave', () => {
+            boxWrap.style.transform = 'translate(0, 0)';
+        });
+    }
 });
