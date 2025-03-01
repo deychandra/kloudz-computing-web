@@ -1689,6 +1689,20 @@ tbody {
 .why-choose-kloudz {
   background-color: #101012;
   position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.why-choose-kloudz .why-choose-glow{
+  max-width: 740px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: -1;
+  opacity: 0.3;
+  transition: transform 0.1s ease-out;
 }
 
 .why-choose-kloudz::before {
@@ -1906,7 +1920,19 @@ tbody {
   overflow: hidden;
 }
 
-
+.ask-away-glow{
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: -3;
+  opacity: 0.4;
+  object-fit: contain;
+  transition: transform 0.1sease-out;
+  height: auto;
+}
 .ask-away::before {
   content: "";
   width: 100%;

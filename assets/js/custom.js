@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // ✅ Add animations to sections
     addMouseMoveAnimation('.glow-move', '.why-choose-us', 50);
+    addMouseMoveAnimation('.why-choose-glow', '.why-choose-kloudz', 150);
     addMouseMoveAnimation('.we-serve-move', '.We-Serve', 40);
     addMouseMoveAnimation('.case-studies-glow', '.case-studies', 50);
     addMouseMoveAnimation('.get-in-touch-glow', '.get-in-touch', 30);
@@ -52,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     addMouseMoveAnimation('.smart-solutions-glow', '.smart-solutions', 30);
     addMouseMoveAnimation('.get-in-touch-glow', '.what-we-do', 30);
     addMouseMoveAnimation('.footer-glow', 'footer', 30);
-    addMouseMoveAnimation('.footer-glow', '.ask-away', 30);
+    addMouseMoveAnimation('.ask-away-glow', '.ask-away', 30);
     addMouseMoveAnimation('.inner-glow', '.inner-banner', 40);
 
     // ✅ Swiper Scroll
