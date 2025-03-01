@@ -1922,7 +1922,7 @@ tbody {
 }
 
 .ask-away-glow{
-  max-width: 100%;
+  max-width: 70%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2096,8 +2096,8 @@ tbody {
 .innovation .img-text {
   position: absolute;
   top: 50%;
-  left: 50%;
-  max-width: 330px;
+  left: 30%;
+  max-width: 240px;
   width: 100%;
   text-align: left;
   opacity: 0;
@@ -2117,8 +2117,6 @@ tbody {
 
 .innovation .img-text p {
   color: #a1a1a6;
-  font-size: 18px;
-  font-weight: 600;
 }
 
 .innovation .img-text span {
