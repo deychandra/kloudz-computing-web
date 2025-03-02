@@ -72,35 +72,46 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    const boxWrap = document.querySelector('.box-wrap');
+// document.addEventListener('DOMContentLoaded', function () {
+//     const boxWrap = document.querySelector('.box-wrap');
+//     if (boxWrap) {
+//         const rect = boxWrap.getBoundingClientRect();
+//         const centerX = rect.left + rect.width / 2;
+//         const centerY = rect.top + rect.height / 2;
+//         document.addEventListener('mousemove', (e) => {
+//             const mouseX = e.clientX - centerX;
+//             const mouseY = e.clientY - centerY;
+//             const maxDistance = 20;
+//             const translateX = (mouseX / rect.width) * maxDistance;
+//             const translateY = (mouseY / rect.height) * maxDistance;
+//             boxWrap.style.transform = `translate(${translateX}px, ${translateY}px)`;
+//         });
+//         boxWrap.addEventListener('mouseleave', () => {
+//             boxWrap.style.transform = 'translate(0, 0)';
+//         });
+//     }
+// });
 
-    if (boxWrap) {
-        // Get the dimensions and position of the box-wrap element
-        const rect = boxWrap.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
 
-        // Add mousemove event listener to the document
-        document.addEventListener('mousemove', (e) => {
-            // Calculate the mouse position relative to the center of the box-wrap
-            const mouseX = e.clientX - centerX;
-            const mouseY = e.clientY - centerY;
 
-            // Define the maximum transform distance (adjust as needed)
-            const maxDistance = 20;
 
-            // Calculate the transform values based on mouse position
-            const translateX = (mouseX / rect.width) * maxDistance;
-            const translateY = (mouseY / rect.height) * maxDistance;
+const box = document.querySelector('.box-wrap');
 
-            // Apply the transform to the box-wrap
-            boxWrap.style.transform = `translate(${translateX}px, ${translateY}px)`;
-        });
+document.addEventListener('mousemove', (e) => {
+    const { clientX: x, clientY: y } = e;
+    const { innerWidth: width, innerHeight: height } = window;
 
-        // Reset the transform when the mouse leaves the box-wrap area
-        boxWrap.addEventListener('mouseleave', () => {
-            boxWrap.style.transform = 'translate(0, 0)';
-        });
-    }
+    const boxRect = box.getBoundingClientRect(); // Get div size
+    const maxMoveX = (width - boxRect.width) / 2; // Ensure full visibility
+    const maxMoveY = (height - boxRect.height) / 2;
+
+    const moveX = ((x / width) - 0.5) * maxMoveX;
+    const moveY = ((y / height) - 0.5) * maxMoveY;
+
+    box.style.transform = `translate(calc(-50% + ${moveX}px), calc(-50% + ${moveY}px))`;
+});
+
+document.addEventListener('mouseleave', () => {
+    box.style.transition = "transform 1s ease-out"; // Smooth return
+    box.style.transform = "translate(-50%, -50%)"; // Center back
 });
