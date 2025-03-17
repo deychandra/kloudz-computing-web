@@ -92,13 +92,17 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px 15px;
-    border-bottom: 1px solid #fff;
+    margin-bottom: 25px;
   }
 
   header .mb-logo>div {
-    flex-grow: 1;
     text-align: center;
   }
+  header ul li {
+    border-bottom: 1px solid #B1B1B1;
+    width: 100%;
+    padding-bottom: 40px;
+}
 
   .flot-shape-one img,
   .flot-shape-two img,
@@ -184,4 +188,7 @@
   .case-studies .grid-item p {
     font-size: 12px;
   }
+  .header-wrap a.logo img {
+    width: 75px;
+}
 }
