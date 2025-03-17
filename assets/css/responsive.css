@@ -328,4 +328,18 @@
 .case-studies .tab-scroll ul::-webkit-scrollbar {
   display: none; 
 }
+.meet-our-team .card-details{
+  left: 0;
+}
+.meet-our-team .team,
+.meet-our-team .team-card:hover .team{
+  width: 65%;
+}
+.meet-our-team .team-card:hover a,
+.meet-our-team .team-card a {
+  left: 30px;
+}
+.meet-our-team .team-card{
+  min-width: 100vw;
+}
 }

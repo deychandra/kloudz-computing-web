@@ -726,6 +726,11 @@ header li a.active {
   justify-content: center;
   align-items: stretch;
   margin-top: 50px;
+  -ms-overflow-style: none;
+}
+
+.meet-our-team .team-container::-webkit-scrollbar {
+  display: none; 
 }
 
 .meet-our-team .team-card {
@@ -813,6 +818,17 @@ header li a.active {
 
 .meet-our-team .team-card:hover .team {
   width: 65%;
+}
+.meet-our-team .team-card:last-child h3 span{
+color: #94E42E;
+}
+.meet-our-team .team-card:last-child h3:after,
+.meet-our-team .team-card:last-child{
+  background-color: #94E42E;
+}
+
+.meet-our-team .team-card:last-child a{
+border: 4px solid #94E42E;
 }
 
 .meet-our-team h6 {
