@@ -98,11 +98,12 @@
   header .mb-logo>div {
     text-align: center;
   }
+
   header ul li {
     border-bottom: 1px solid #B1B1B1;
     width: 100%;
     padding-bottom: 40px;
-}
+  }
 
   .flot-shape-one img,
   .flot-shape-two img,
@@ -152,9 +153,10 @@
   .We-Serve .appear-img {
     max-width: 116px;
   }
+
   .We-Serve .serve-bx .text-end img {
     max-width: 50px;
-}
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -188,7 +190,43 @@
   .case-studies .grid-item p {
     font-size: 12px;
   }
+
   .header-wrap a.logo img {
     width: 75px;
-}
+  }
+
+  .banner h1 {
+    line-height: 49px;
+    font-size: 40px;
+  }
+
+  .banner p {
+    font-size: 16px;
+    line-height: normal;
+  }
+
+  .animated-btn {
+    font-size: 14px;
+  }
+
+  .flot-shape-one img,
+  .flot-shape-two img,
+  .flot-shape-three img {
+    max-width: 120px;
+  }
+
+  .flot-shape-two {
+
+    top: 20%;
+    left: 80%;
+  }
+
+  .flot-shape-three {
+    top: 61%;
+  }
+
+  .flot-shape-one {
+    bottom: 10px;
+    left: 20px;
+  }
 }
