@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const section = document.querySelector(sectionClass);
 
         if (!image || !section) {
-            console.warn(`Warning: Element ${imageClass} or ${sectionClass} not found.`);
+            // console.warn(`Warning: Element ${imageClass} or ${sectionClass} not found.`);
             return;
         }
 
