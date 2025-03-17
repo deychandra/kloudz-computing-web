@@ -71,10 +71,14 @@
     width: 100vw;
     height: 100vh;
     transition: all 0.5s linear;
+    visibility: hidden;
+    opacity: 0;
   }
 
   .mb-container.open-menu {
     left: 0%;
+    visibility: visible;
+    opacity: 1;
   }
 
   nav {
@@ -156,6 +160,7 @@
   .We-Serve .serve-bx .text-end > a img {
     max-width: 50px;
   }
+ 
 }
 
 @media only screen and (max-width: 768px) {
@@ -272,4 +277,32 @@
     top: 140px;
     right: -14px;
   }
+
+
+  .We-Serve .serve-bx .text-end > a {
+    display: none;
+  }
+  .We-Serve .serve-bx:hover .appear-img{
+    transform: none;
+  }
+  .We-Serve .appear-img {
+    position: static;
+    transform: none;
+}
+.We-Serve .serve-bx small{
+  font-size: 16px;
+  max-width: 100%;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+
+.We-Serve .serve-bx:hover h4 {
+  transform: none;
+}
+.We-Serve .serve-bx h4{
+  background: linear-gradient(274.23deg, #8161ff 17.37%, #c366ff 40.24%, #fff759 111.95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 }
