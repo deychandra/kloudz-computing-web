@@ -198,8 +198,7 @@
 
   .case-studies .grid-content {
     margin-top: 12px;
-    flex-direction: column;
-    align-items: self-start;
+    align-items: center;
     gap: 10px;
   }
 
@@ -400,4 +399,13 @@
     width: 40px;
     height: 40px;
   }
+  .get-in-touch .sub-heading{
+    font-size: 22px;
+  }
+  .get-in-touch h6{
+    font-size: 33px;
+  }
+  footer .slider-item {
+    font-size: 50px;
+}
 }
