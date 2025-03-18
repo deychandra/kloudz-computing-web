@@ -2215,6 +2215,9 @@ tbody {
   margin-top: 40px;
 }
 
+.social.mobile-social {
+  display: none;
+}
 
 .smart-solutions .smart-solutions-glow {
   max-width: 100%;
