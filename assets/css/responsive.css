@@ -211,7 +211,10 @@
   footer .copy-right:nth-child(2){
   order: 1;
   }
-
+  footer .gp{
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }
 
 @media only screen and (max-width: 576px) {
