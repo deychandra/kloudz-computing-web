@@ -4,6 +4,17 @@
   }
 }
 
+@media only screen and (max-width: 1500px) {
+  .testimonial .swiper-button-next {
+
+    right: -50px;
+  }
+
+  .testimonial .swiper-button-prev {
+    left: -50px;
+  }
+}
+
 @media only screen and (max-width: 1400px) {
   .sub-heading {
     font-size: 48px;
@@ -16,11 +27,11 @@
   }
 
   .testimonial .swiper-button-prev {
-    left: -50px;
+    left: -24px;
   }
 
   .testimonial .swiper-button-next {
-    right: -50px;
+    right: -24px;
   }
 }
 
@@ -157,10 +168,10 @@
     max-width: 116px;
   }
 
-  .We-Serve .serve-bx .text-end > a img {
+  .We-Serve .serve-bx .text-end>a img {
     max-width: 50px;
   }
- 
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -172,9 +183,7 @@
   .case-studies .grid-content a img {
     width: 30px;
   }
-  .testimonial .slide-bx{
-    padding: 35px 35px 90px;
-  }
+
 }
 
 @media only screen and (max-width: 576px) {
@@ -268,67 +277,127 @@
     line-height: normal;
     padding-bottom: 16px;
   }
-  .why-choose-us .glowing-bx{
+
+  .why-choose-us .glowing-bx {
     padding: 20px;
     border-radius: 40px;
   }
-  .md-globe{
+
+  .md-globe {
     width: 65px;
   }
-  .sm-globe{
+
+  .sm-globe {
     width: 52px;
     top: 140px;
     right: -14px;
   }
 
 
-  .We-Serve .serve-bx .text-end > a {
+  .We-Serve .serve-bx .text-end>a {
     display: none;
   }
-  .We-Serve .serve-bx:hover .appear-img{
+
+  .We-Serve .serve-bx:hover .appear-img {
     transform: none;
   }
+
   .We-Serve .appear-img {
     position: static;
     transform: none;
-}
-.We-Serve .serve-bx small{
-  font-size: 16px;
-  max-width: 100%;
-  line-height: normal;
-  margin-bottom: 10px;
-}
+  }
 
-.We-Serve .serve-bx:hover h4 {
-  transform: none;
-}
-.We-Serve .serve-bx h4{
-  background: linear-gradient(274.23deg, #8161ff 17.37%, #c366ff 40.24%, #fff759 111.95%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.case-studies .tab-scroll ul{
-  overflow-y: auto;
-  padding: 10px 10px;
-  scrollbar-width: none; 
-  -ms-overflow-style: none;
-  flex-wrap: nowrap;
-}
-.case-studies .tab-scroll ul::-webkit-scrollbar {
-  display: none; 
-}
-.meet-our-team .card-details{
-  left: 0;
-}
-.meet-our-team .team,
-.meet-our-team .team-card:hover .team{
-  width: 65%;
-}
-.meet-our-team .team-card:hover a,
-.meet-our-team .team-card a {
-  left: 30px;
-}
-.meet-our-team .team-card{
-  min-width: 100vw;
-}
+  .We-Serve .serve-bx small {
+    font-size: 16px;
+    max-width: 100%;
+    line-height: normal;
+    margin-bottom: 10px;
+  }
+
+  .We-Serve .serve-bx:hover h4 {
+    transform: none;
+  }
+
+  .We-Serve .serve-bx h4 {
+    background: linear-gradient(274.23deg, #8161ff 17.37%, #c366ff 40.24%, #fff759 111.95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .case-studies .tab-scroll ul {
+    overflow-y: auto;
+    padding: 10px 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    flex-wrap: nowrap;
+  }
+
+  .case-studies .tab-scroll ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  .meet-our-team .card-details {
+    left: 0;
+  }
+
+  .meet-our-team .team,
+  .meet-our-team .team-card:hover .team {
+    width: 65%;
+  }
+
+  .meet-our-team .team-card:hover a,
+  .meet-our-team .team-card a {
+    left: 30px;
+  }
+
+  .meet-our-team .team-card {
+    min-width: 100vw;
+  }
+
+  .testimonial .slide-bx {
+    padding: 16px 16px 90px 16px;
+  }
+
+  .testimonial .swiper-pagination {
+    margin-bottom: -100px;
+  }
+
+  .testimonial .swiper-pagination-bullet {
+    margin: 0 5px !important;
+    padding: 3px;
+  }
+
+  .testimonial .swiper-pagination-bullet::before {
+    width: 30px;
+    height: 30px;
+  }
+
+  .testimonial .swiper-button-next {
+    top: inherit;
+    bottom: 18px;
+    right: inherit;
+    left: 50%;
+    transform: translateX(calc(-50% + 102px));
+  }
+
+  .testimonial .swiper-button-prev {
+    top: inherit;
+    bottom: 18px;
+    right: inherit;
+    left: 50%;
+    transform: translateX(calc(-50% + -92px));
+  }
+
+  .testimonial .wraping {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 0;
+  }
+
+  .testimonial .swiper-button-prev,
+  .testimonial .swiper-button-next {
+    width: 40px;
+    height: 40px;
+  }
 }
