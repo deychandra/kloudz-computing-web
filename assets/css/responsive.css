@@ -67,6 +67,9 @@
   .inner-banner h1 {
     font-size: 60px;
   }
+  .contact-get-touch h2{
+    font-size: 44px;
+  }
 }
 
 
@@ -272,6 +275,10 @@
 
   .where-technology .table-border h3 {
     padding: 15px;
+  }
+  .contact-get-touch small,
+  .contact-get-touch h2 {
+    text-align: center;
   }
 
 }
@@ -532,5 +539,27 @@
 .why-choose-kloudz .gd-bx{
   text-align: center;
 }
-
+.contact-get-touch h2 {
+  font-size: 30px;
+}
+.contact-get-touch small{
+  font-size: 16px;
+  margin: 0;
+}
+.contact-get-touch strong{
+  font-size: 16px;
+}
+.contact-get-touch .icon {
+  width: 18px;
+  margin-bottom: 15px;
+}
+.contact-get-touch p{
+  font-size: 14px;
+}
+.contact-get-touch a{
+  font-size: 16px;
+}
+.contact-get-touch a img{
+  width: 26px;
+}
 }
