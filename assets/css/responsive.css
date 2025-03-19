@@ -67,8 +67,14 @@
   .inner-banner h1 {
     font-size: 60px;
   }
-  .contact-get-touch h2{
+
+  .contact-get-touch h2 {
     font-size: 44px;
+  }
+
+  .smart-solutions h2 {
+    font-size: 50px;
+    line-height: 55px;
   }
 }
 
@@ -182,10 +188,16 @@
   .We-Serve .serve-bx .text-end>a img {
     max-width: 50px;
   }
+
   .innovation .text-bx {
     min-width: 565px;
-}
+  }
 
+  .ask-away h6,
+  .ask-away h3,
+  .ask-away p {
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -276,11 +288,32 @@
   .where-technology .table-border h3 {
     padding: 15px;
   }
+
   .contact-get-touch small,
   .contact-get-touch h2 {
     text-align: center;
   }
 
+  .ask-away h3 {
+    font-size: 40px;
+  }
+
+  .ask-away h6 {
+    font-size: 18px;
+  }
+
+  .smart-solutions h2 {
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  .smart-solutions p {
+    font-size: 20px;
+  }
+
+  .smart-solutions .shape-bx {
+    max-width: 280px;
+  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -524,42 +557,79 @@
   .where-technology .table-border h3 {
     font-size: 25px;
   }
+
   .where-technology .content-bx {
     padding: 30px 24px;
+  }
+
+  .where-technology .content-bx p {
+    font-size: 14px;
+  }
+
+  .where-technology .content-bx p {
+    padding-bottom: 20px;
+  }
+
+  .why-choose-kloudz .content-container {
+    margin-bottom: 0;
+  }
+
+  .why-choose-kloudz .gd-bx {
+    text-align: center;
+  }
+
+  .contact-get-touch h2 {
+    font-size: 30px;
+  }
+
+  .contact-get-touch small {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .contact-get-touch strong {
+    font-size: 16px;
+  }
+
+  .contact-get-touch .icon {
+    width: 18px;
+    margin-bottom: 15px;
+  }
+
+  .contact-get-touch p {
+    font-size: 14px;
+  }
+
+  .contact-get-touch a {
+    font-size: 16px;
+  }
+
+  .contact-get-touch a img {
+    width: 26px;
+  }
+
+  .ask-away .contact-frm {
+    padding: 40px 20px;
+  }
+
+  .ask-away form {
+    padding: 18px;
+  }
+
+  .ask-away .form-control {
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding: 20px;
+  }
+  .smart-solutions h2 {
+    font-size: 36px;
+    line-height: 46px;
 }
-.where-technology .content-bx p{
+.smart-solutions .shape-bx {
+  max-width: 182px;
+}
+.smart-solutions p {
   font-size: 14px;
-}
-.where-technology .content-bx p {
-  padding-bottom: 20px;
-}
-.why-choose-kloudz .content-container {
-  margin-bottom: 0;
-}
-.why-choose-kloudz .gd-bx{
-  text-align: center;
-}
-.contact-get-touch h2 {
-  font-size: 30px;
-}
-.contact-get-touch small{
-  font-size: 16px;
-  margin: 0;
-}
-.contact-get-touch strong{
-  font-size: 16px;
-}
-.contact-get-touch .icon {
-  width: 18px;
-  margin-bottom: 15px;
-}
-.contact-get-touch p{
-  font-size: 14px;
-}
-.contact-get-touch a{
-  font-size: 16px;
-}
-.contact-get-touch a img{
-  width: 26px;
+  line-height: normal;
 }
 }
