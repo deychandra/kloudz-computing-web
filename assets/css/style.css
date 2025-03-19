@@ -2182,6 +2182,14 @@ padding-bottom: 30px;
   width: 100%;
   position: relative;
 }
+.smart-solutions.smrt-services .content-wrap{
+  max-width: 100%;
+}
+.smart-solutions.smrt-services p{
+  max-width: 512px;
+  width: 100%;
+  margin: auto;
+}
 
 .smart-solutions p {
   color: #141414;
