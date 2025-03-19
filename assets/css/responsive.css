@@ -179,6 +179,9 @@
   .We-Serve .serve-bx .text-end>a img {
     max-width: 50px;
   }
+  .innovation .text-bx {
+    min-width: 565px;
+}
 
 }
 
