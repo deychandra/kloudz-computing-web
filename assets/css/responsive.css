@@ -63,7 +63,8 @@
     max-width: 100px;
     width: 100%;
   }
-  .inner-banner h1{
+
+  .inner-banner h1 {
     font-size: 60px;
   }
 }
@@ -73,7 +74,8 @@
   header .hamburger {
     display: block;
   }
-  .where-technology th{
+
+  .where-technology .table-border h3 {
     font-size: 30px;
   }
 
@@ -214,34 +216,60 @@
     flex-direction: column;
     gap: 20px;
   }
-  footer .copy-right:nth-child(2){
-  order: 1;
+
+  footer .copy-right:nth-child(2) {
+    order: 1;
   }
-  footer .gp{
+
+  footer .gp {
     flex-wrap: wrap;
     gap: 10px;
   }
+
   .inner-banner h1 {
     font-size: 40px;
     line-height: 1.3;
-}
-.inner-banner h1 > div{
-  display: inline-block;
+  }
 
-}
-.inner-banner h1,
-.inner-banner h3{
-  text-align: center;
-}
+  .inner-banner h1>div {
+    display: inline-block;
 
-.where-technology .sub-heading,
-.where-technology p{
-text-align: center;
-}
-.what-we-do .left-align,
-.what-we-do .right-align {
-  text-align: center;
-}
+  }
+
+  .inner-banner h1,
+  .inner-banner h3 {
+    text-align: center;
+  }
+
+  .where-technology .sub-heading,
+  .where-technology p {
+    text-align: center;
+  }
+
+  .what-we-do .left-align,
+  .what-we-do .right-align {
+    text-align: center;
+  }
+
+  .where-technology .table-border {
+    flex-direction: column;
+  }
+
+  .where-technology .table-row {
+    width: 100%;
+  }
+
+  .where-technology .table-row:nth-child(2) .heading {
+    border-top: 1px solid #fff;
+  }
+
+  .where-technology .table-row:first-child {
+    border-right: 0;
+  }
+
+  .where-technology .table-border h3 {
+    padding: 15px;
+  }
 
 }
 
@@ -470,12 +498,36 @@ text-align: center;
   footer .slider-item {
     font-size: 50px;
   }
+
   .pb-100 {
     padding-bottom: 50px;
+  }
+
+  .pt-100 {
+    padding-top: 50px;
+  }
+
+  .where-technology .table-border {
+    margin-top: 50px;
+  }
+
+  .where-technology .table-border h3 {
+    font-size: 25px;
+  }
+  .where-technology .content-bx {
+    padding: 30px 24px;
 }
-.pt-100 {
-  padding-top: 50px;
+.where-technology .content-bx p{
+  font-size: 14px;
 }
-.where-technology .table-border {
-  margin-top: 50px;}
+.where-technology .content-bx p {
+  padding-bottom: 20px;
+}
+.why-choose-kloudz .content-container {
+  margin-bottom: 0;
+}
+.why-choose-kloudz .gd-bx{
+  text-align: center;
+}
+
 }
